@@ -1,20 +1,16 @@
-//Are www.ibiblio.org and helios.ibiblio.org the same?
+//Create InetAddress objects for “www.ibiblio.org ”and “helios.ibiblio.org ”and then tell whether they’re same machine or not.
 
 import java.net.*;
-import java.util.Scanner;
 
 public class IBiblioAliases {
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        String Domain1 = input.nextLine();
-        String Domain2 = input.nextLine();
+    public static void main(String args[]) {
         try {
-            InetAddress ibiblio = InetAddress.getByName(Domain1);
-            InetAddress helios = InetAddress.getByName(Domain2);
+            InetAddress ibiblio = InetAddress.getByName("www.facebook.com");
+            InetAddress helios = InetAddress.getByName("www.fb.com");
             if (ibiblio.equals(helios)) {
-                System.out.println(Domain1 + " is the same as " + Domain2);
+                System.out.println("www.facebook.com is the same as www.fb.com");
             } else {
-                System.out.println(Domain1 + " isnot  same as " + Domain2);
+                System.out.println("www.facebook.com is not the same as www.fb.com");
             }
         } catch (UnknownHostException ex) {
             System.out.println("Host lookup failed.");

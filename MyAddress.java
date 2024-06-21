@@ -1,3 +1,4 @@
+//Write a simple program to list all network interface on the local host
 import java.net.*;
 public class MyAddress
 {
