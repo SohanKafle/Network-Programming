@@ -1,10 +1,9 @@
+//Write a simple program to process web server logfiles.
 import java.io.*;
 import java.net.*;
-import java.util.*;
 
 public class Weblog {
     public static void main(String[] args) {
-
         try (FileInputStream fin = new FileInputStream(args[0]);
                 Reader in = new InputStreamReader(fin);
                 BufferedReader bin = new BufferedReader(in);) {
