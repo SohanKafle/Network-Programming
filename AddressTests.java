@@ -4,12 +4,13 @@ import java.util.Scanner;
 public class AddressTests {
     public static int getVersion(InetAddress ia) {
         byte[] address = ia.getAddress();
-        if (address.length == 4)
+        if (address.length == 4) {
             return 4;
-        else if (address.length == 16)
+        } else if (address.length == 16) {
             return 6;
-        else
+        } else {
             return -1;
+        }
     }
 
     public static void main(String[] args) {
