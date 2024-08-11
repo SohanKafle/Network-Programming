@@ -7,8 +7,8 @@ public class BufferDemo {
         System.out.println("Input Text: " + text);
         for (int i = 0; i < text.length(); i++)
         {
-           Char C =  text.charAt(i);
-           buffer.put(C);
+           char c =  text.charAt(i);
+           buffer.put(c);
         }
         int bufferpos = buffer.position();
         System.out.println("Position after data written into buffer: " + bufferpos);
@@ -20,9 +20,9 @@ public class BufferDemo {
         }
         buffer.position(5);
         buffer.mark();
-        buffer.;position(8);
+        buffer.position(6);
         buffer.reset();
-        System.out.println("\nRestored buffer position: " +buffer.position());
+        System.out.println("/n Restored buffer position: " +buffer.position());
 
     }
 }
