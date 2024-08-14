@@ -1,4 +1,4 @@
-//Write a simple program to illustrate spam check. 
+// 4. Write a simple program to illustrate spam check. 
 import java.net.*;
 
 public class Spamcheck {
@@ -18,15 +18,18 @@ public class Spamcheck {
         try {
             InetAddress address = InetAddress.getByName(arg);
             byte[] quad = address.getAddress();
+
+            // Reverse the octet order to form the correct query
             String query = BLACKHOLE;
-            for (byte octet : quad) {
-                int unsignedByte = octet < 0 ? octet + 256 : octet;
+            for (int i = quad.length - 1; i >= 0; i--) {
+                int unsignedByte = quad[i] < 0 ? quad[i] + 256 : quad[i];
                 query = unsignedByte + "." + query;
             }
+
             InetAddress.getByName(query);
-            return true;
+            return true;  // If no exception, the IP is listed
         } catch (UnknownHostException e) {
-            return false;
+            return false;  // Not listed in the blacklist
         }
     }
 }

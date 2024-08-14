@@ -1,4 +1,4 @@
-//Write a simple program to process web server logfiles.
+// 5. Write a simple program to process web server logfiles.
 import java.io.*;
 import java.net.*;
 

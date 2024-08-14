@@ -1,4 +1,4 @@
-//Write a simple program by using all eight methods to split URLs entered on the command line into their component parts.
+// 6. Write a simple program by using all eight methods to split URLs entered on the command line into their component parts.
 import java.net.*;
 
 public class URLSplitter {

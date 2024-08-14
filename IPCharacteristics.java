@@ -1,4 +1,4 @@
-//Testing the characteristics of an IP address.
+// 1. Testing the characteristics of an IP address.
 import java.net.*;
 import java.util.*;
 

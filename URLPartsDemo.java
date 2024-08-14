@@ -1,3 +1,5 @@
+// 8. Write a program to demonstrate the parts of the URL.
+
 import java.net.URL;
 import java.net.MalformedURLException;
 
